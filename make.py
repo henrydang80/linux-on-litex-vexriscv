@@ -210,7 +210,7 @@ def main():
         if board_name in ["versa_ecp5", "ulx3s"]:
             soc_kwargs["toolchain"] = "trellis"
         if board_name in ["qmatech"]:
-            soc = SoCPicorv32(board.soc_cls, **soc_kwargs)
+            soc = SoCLinux(board.soc_cls, **soc_kwargs)
         else:   
             soc = SoCLinux(board.soc_cls, **soc_kwargs)
         if "spiflash" in board.soc_capabilities:
